@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		#map {
+			margin-left: auto;
+            margin-right: auto;
+			width: 100%;
+			height: 500px;
+		}
+		a {
+			display: block;
+			width: 10px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 700;
+			border-radius: 10px;
+			padding: 15px 30px;
+			background-color: rgb(97, 68, 211);
+			color:aliceblue;
+			text-decoration: none;
+		}
+	
+	</style>
+
+	
+</head>
+<body>
+	<h1>Mapa del Barrio Usme</h1>
+
+<div id="map"></div>
+<script>
+
+	const map = L.map('map').setView([4.4731054,-74.1273073], 16);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	var marker = L.marker([4.4704708184488435, -74.12555846408472]).addTo(map)
+		.bindPopup('<b>Nombre: Districarnes El Cebu </b><br />Direccion: Cl 138 sur nro 2 - 3 <br />Horario: de 5:30 AM a 6:00 PM.').openPopup();
+		var marker = L.marker([4.4699922053379675, -74.12614233903923]).addTo(map)
+		.bindPopup('<b>Nombre: Comercializadora de carnes el rubi </b><br />Direccion: Cra 14  nro 138 - 11 sur<br />Horario: de 7:00 AM a 6:00 PM.').openPopup();
+		var marker = L.marker([4.4693856272743755, -74.12732150281451]).addTo(map)
+		.bindPopup('<b>Nombre: Matadero Usme </b><br />Direccion: Cra 14 a nro 138 - 17 sur<br />Horario: En funcionamiento las 24 h.').openPopup();
+		var marker = L.marker([4.46990536604829, -74.12606558347416]).addTo(map)
+		.bindPopup('<b>Nombre: Districarnes</b><br />Direccion: Cl 138 sur nro 13 - 41 sur<br />Horario: de 7:00 AM a 6:00 PM.').openPopup();
+		var marker = L.marker([4.472070722306035, -74.12358058303406]).addTo(map)
+		.bindPopup('<b>Nombre: Distribuidora de carnes La Exelencia</b><br />Direccion: Cra 14 nro 136 a - 96 sur<br />Horario: de 9:00 AM a 8:00 PM.').openPopup();
+		var marker = L.marker([4.470370115373173, -74.12590757855045]).addTo(map)
+		.bindPopup('<b>Nombre: Expendio De Carnes De Cebu</b><br />Direccion: Cl 137sur nro 53 - 3 <br />Horario: de 9:00 AM a 8:00 PM.').openPopup();
+		var marker = L.marker([4.470001776286562, -74.12619353394534]).addTo(map)
+		.bindPopup('<b>Carnes Y.T</b><br />Direccion: Cl 138 sur nro 2 - 3 <br />Horario: de 5:00 AM a 6:00 PM.').openPopup();
+	
+</script>
+<a href="http://127.0.0.1:5000/nuevo">+</a>
+
+
+</body>
+</html>
